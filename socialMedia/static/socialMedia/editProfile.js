@@ -108,8 +108,8 @@ $(".secondaryPic").click(function(e){
 
 $("#syncWithFacebook").click(function(e){
    e.preventDefault();
-    $("#dialogBox").append("<fb:login-button scope='public_profile,email' onlogin='checkLoginState();'>"
-                + "</fb:login-button>");
+    $("#dialogBox").show();
+    
 
     function statusChangeCallback(response) {
     console.log('statusChangeCallback');

@@ -28,7 +28,8 @@
                   </div>
                   <p><a id='uploadProfilePic' class="btn btn-lg btn-success" href="/editProfile/uploadPic" role="button">Upload Picture</a></p>
                   <p><a id='syncWithFacebook' class="btn btn-lg btn-success" role="button">Sync With Facebook Login</a></p>
-                  <div id="dialogBox">
+                  <div id="dialogBox" style="display:none;">
+                      <fb:login-button scope='public_profile,email' onlogin='checkLoginState();'></fb:login-button>
                     </div>
                     <div id="status">
                         </div>
