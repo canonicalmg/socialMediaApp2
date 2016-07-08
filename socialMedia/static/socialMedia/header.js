@@ -29,7 +29,7 @@ $("#signOutSubmit").click(function(e) {
                  success: function(){
                      console.log("done");
                      //FB.logout();
-                     window.location.replace("http://localhost:8000/");
+                     window.location.replace("/");
                      function fbLogoutUser() {
                         FB.getLoginStatus(function(response) {
                             if (response && response.status === 'connected') {

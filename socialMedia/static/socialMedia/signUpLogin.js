@@ -56,7 +56,7 @@ function headerSignIn(email, pass){
                         },
                  success: function(){
                      console.log("done");
-                     window.location.replace("http://localhost:8000/home#");
+                     window.location.replace("/home#");
                  }
         });
 }
@@ -106,7 +106,7 @@ $("#submitSignUp").click(function(e) {
                         },
                  success: function(){
                      console.log("done");
-                     window.location.replace("http://localhost:8000/home#");
+                     window.location.replace("/home#");
                  }
             });
 
@@ -167,7 +167,7 @@ function statusChangeCallback(response) {
   // These three cases are handled in the callback function.
 
   FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
+    //statusChangeCallback(response);
   });
 
   };
@@ -201,7 +201,7 @@ function statusChangeCallback(response) {
                         },
                  success: function(){
                      console.log("done");
-                     window.location.replace("http://localhost:8000/home#");
+                     window.location.replace("/home#");
                  }
         });
     });
