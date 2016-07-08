@@ -123,3 +123,9 @@ USE_L10N = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'socialmedia/images')
 MEDIA_URL = '/images/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    print 'local_settings not found'
+

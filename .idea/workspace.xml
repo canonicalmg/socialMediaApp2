@@ -2,7 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/alien.jpg" afterPath="$PROJECT_DIR$/images/alien.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/alien_pUB1auM.jpg" afterPath="$PROJECT_DIR$/images/alien_pUB1auM.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/blank.jpg" afterPath="$PROJECT_DIR$/images/blank.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/dog.jpg" afterPath="$PROJECT_DIR$/images/dog.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/science.jpg" afterPath="$PROJECT_DIR$/images/science.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/images/alien.jpg" afterPath="$PROJECT_DIR$/socialMedia/images/alien.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/images/blank.jpg" afterPath="$PROJECT_DIR$/socialMedia/images/blank.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/images/blank_VgrCqMy.jpg" afterPath="$PROJECT_DIR$/socialMedia/images/blank_VgrCqMy.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/images/dog.jpg" afterPath="$PROJECT_DIR$/socialMedia/images/dog.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/images/science.jpg" afterPath="$PROJECT_DIR$/socialMedia/images/science.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/images/trump.jpg" afterPath="$PROJECT_DIR$/socialMedia/images/trump.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/blank.jpg" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/blank.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/dog.jpg" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/dog.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/science.jpg" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/science.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/trump.jpg" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/images/trump.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/blank.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/blank.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/dog.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/dog.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/dog_Yo5ZB5F.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/dog_Yo5ZB5F.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/dog_thPLH7u.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/dog_thPLH7u.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/science.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/science.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/science_7ykr4of.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/science_7ykr4of.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/science_kzdEJin.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/science_kzdEJin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/trump.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/trump.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialmedia/images/trump_rDbQEh6.jpg" afterPath="$PROJECT_DIR$/socialmedia/images/trump_rDbQEh6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/socialMediaApp.iml" afterPath="$PROJECT_DIR$/.idea/socialMediaApp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/__init__.py" afterPath="$PROJECT_DIR$/socialMedia/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/admin.py" afterPath="$PROJECT_DIR$/socialMedia/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/apps.py" afterPath="$PROJECT_DIR$/socialMedia/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/forms.py" afterPath="$PROJECT_DIR$/socialMedia/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0002_auto_20160706_2029.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0002_auto_20160706_2029.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0003_auto_20160706_2059.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0003_auto_20160706_2059.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0004_auto_20160706_2121.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0004_auto_20160706_2121.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0005_imageupload.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0005_imageupload.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0006_auto_20160707_1647.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0006_auto_20160707_1647.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0007_wallpost_created_at.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0007_wallpost_created_at.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0008_postcomment.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0008_postcomment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/0009_profile_facebookid.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/0009_profile_facebookid.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/migrations/__init__.py" afterPath="$PROJECT_DIR$/socialMedia/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/models.py" afterPath="$PROJECT_DIR$/socialMedia/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/header.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/home.css" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/home.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/jquery.easyPaginate.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/jquery.easyPaginate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/tests.py" afterPath="$PROJECT_DIR$/socialMedia/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/urls.py" afterPath="$PROJECT_DIR$/socialMedia/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/views.py" afterPath="$PROJECT_DIR$/socialMedia/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMediaApp/__init__.py" afterPath="$PROJECT_DIR$/socialMediaApp/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMediaApp/settings.py" afterPath="$PROJECT_DIR$/socialMediaApp/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMediaApp/urls.py" afterPath="$PROJECT_DIR$/socialMediaApp/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMediaApp/wsgi.py" afterPath="$PROJECT_DIR$/socialMediaApp/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/editProfile.html" afterPath="$PROJECT_DIR$/templates/editProfile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.html" afterPath="$PROJECT_DIR$/templates/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.html" afterPath="$PROJECT_DIR$/templates/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/signUpLogin.html" afterPath="$PROJECT_DIR$/templates/signUpLogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/uploadPic.html" afterPath="$PROJECT_DIR$/templates/uploadPic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/userProfile.html" afterPath="$PROJECT_DIR$/templates/userProfile.html" />
     </list>
     <ignored path="socialMediaApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +117,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,7 +130,7 @@
             <state relative-caret-position="420">
               <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding>
-                <marker date="1468013150273" expanded="true" signature="2801:2821" ph="..." />
+                <marker date="1468016657810" expanded="true" signature="2801:2821" ph="..." />
               </folding>
             </state>
           </provider>
@@ -942,7 +1008,7 @@
         <state relative-caret-position="495">
           <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding>
-            <marker date="1468013150273" expanded="true" signature="2801:2821" ph="..." />
+            <marker date="1468016657810" expanded="true" signature="2801:2821" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1214,7 +1280,7 @@
         <state relative-caret-position="420">
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
-            <marker date="1468013150273" expanded="true" signature="2801:2821" ph="..." />
+            <marker date="1468016657810" expanded="true" signature="2801:2821" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1231,8 +1297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
