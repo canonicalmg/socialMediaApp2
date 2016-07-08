@@ -28,8 +28,18 @@ $("#signOutSubmit").click(function(e) {
                     },
                  success: function(){
                      console.log("done");
-                     FB.logout();
+                     //FB.logout();
                      window.location.replace("http://localhost:8000/");
+                     function fbLogoutUser() {
+                        FB.getLoginStatus(function(response) {
+                            if (response && response.status === 'connected') {
+                                FB.logout(function(response) {
+                                    document.location.reload();
+                                });
+                            }
+                        });
+}
+                     fbLogoutUser();
                  }
         });
 });
@@ -86,7 +96,7 @@ function statusChangeCallback(response) {
         $("#signOutSubmit").click(function(e) {
     e.preventDefault();
     console.log("signing out");
-            FB.logout(FB.getAccessToken());
+           // FB.logout(FB.getAccessToken());
 });
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -133,9 +143,7 @@ function statusChangeCallback(response) {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-FB.logout(function(response) {
-  // user is now logged out
-});
+
   };
 
   // Load the SDK asynchronously
