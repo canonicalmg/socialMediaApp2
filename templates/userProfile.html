@@ -1,0 +1,97 @@
+<!-- Latest compiled and minified CSS -->
+{% load static %}
+
+{% include "header.html" %}
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li><a href="/home">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="/editProfile">Edit Profile</a></li>
+            <li class="active"><a href="#">Profile</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="container">
+
+
+      <div class="jumbotron">
+        <h1>{{ title }}'s Wall</h1>
+          <div class="row">
+              <div class="col-md-4">
+                  <div id="primaryPic">
+                    <img src="{{ primaryPic }}" class="img-rounded" alt="Cinque Terre" width="304" height="300">
+                  </div>
+                  <div id="profileDesc">
+                    <p>{{ aboutMe }}</p>
+                  </div>
+              </div>
+              <div class="col-md-8">
+                  <h2>Write to wall:</h2>
+                  <textarea id='wallTextArea' class="form-control" rows="3" placeholder="Say hello!"></textarea>
+                  <button id='writeToWall' type="button" style="float:right;" class="btn btn-lg btn-primary">Send</button>
+              </div>
+          </div>
+
+      </div>
+
+              <div class="Jumbotron">
+                  <h2>Posts</h2>
+              <div id="postBagProfile">
+                    {% for sender, content, createdAt, senderPic, comments, postPK in wallPosts %}
+                      <div class="wallPost">
+                        <div class="postSender">
+                            <p>from: <a href="/user/{{ sender.username }}">  {{ sender.username }}</a></p>
+                            <img src="{{ senderPic }}" class="img-rounded" width="100" height="100">
+                        </div>
+                        <div class="postContent">
+                          <p> {{ content }}</p>
+                        </div>
+                          {% for comment in comments %}
+                              <div class="postComment">
+                                <p> <a href="/user/{{ comment.commentSender.username }}"> {{ comment.commentSender.username }}</a>: {{ comment.content }}</p>
+                              </div>
+                          {% endfor %}
+                                <div style="display:flex;" class="postComment sendComment">
+                                    <input type="text" id="wallCommentVal{{ postPK }}" class="form-control" placeholder="write a comment">
+                                    <p><a class='btn btn-success' onclick="postNewComment({{ postPK }})" role='button'>Send</a></p>
+                                </div>
+                        <div class="postDate">
+                            <p> {{ createdAt }}</p>
+                        </div>
+                      </div>
+                  {% endfor %}
+{#              {% for wallPost in wallPosts %}#}
+{#                      <div class="wallPost">#}
+{#                        <div class="postSender">#}
+{#                            <p>from: <a href="/user/{{ wallPost.postSender.username }}">  {{ wallPost.postSender.username }}</a></p>#}
+{#                            <img src=" {{ wallPost.postSender.profile.getPrimaryPicURL }}" class="img-rounded" width="100" height="100">#}
+{#                        </div>#}
+{#                        <div class="postContent">#}
+{#                          <p> {{ wallPost.content }}</p>#}
+{#                        </div>#}
+{#                        <div class="postDate">#}
+{#                            <p> {{ wallPost.created_at }}</p>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                  {% endfor %}#}
+              </div>
+              </div>
+    </div>
+        </div>
+      </div>
+
+    </div>
+
+<script>
+    var fromContext = '{{ primaryPic }}';
+</script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{% include "footer.html" %}
+</body>
+<script type="text/javascript" src="../../static/socialMedia/userProfile.js"></script>
+</html>

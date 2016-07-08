@@ -1,0 +1,62 @@
+{% include "header.html" %}
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li><a href="/home">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="/editProfile">Edit Profile</a></li>
+            <li><a href="/user/{{ request.user.username }}">Profile</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Edit Profile</h1>
+
+          <div class="container">
+
+
+      <div class="jumbotron">
+        <h1>{{ title }}</h1>
+          <div class="row">
+              <div class="col-md-4">
+                  <div id="primaryPic">
+                    <img src="{{ primaryPic }}" id="primaryPicActual" class="img-rounded" width="304" height="300">
+                  </div>
+                  <div id="profileDesc">
+                    <p id="descActual">{{ aboutMe }}</p>
+                      <p><a id='editDesc' class="btn btn-lg btn-success" role="button">Edit Description</a></p>
+                  </div>
+                  <p><a id='uploadProfilePic' class="btn btn-lg btn-success" href="/editProfile/uploadPic" role="button">Upload Picture</a></p>
+                  <p><a id='syncWithFacebook' class="btn btn-lg btn-success" role="button">Sync With Facebook Login</a></p>
+                  <div id="dialogBox">
+                    </div>
+                    <div id="status">
+                        </div>
+              </div>
+              <div id='secondaryPictures' class="col-md-8">
+                  {% for secondaryPic, picDesc, picID in secondaryPics %}
+                      <div>
+                      <img src="{{ secondaryPic }}" id="secondary{{ picID }}" class="img-rounded secondaryPic" width="200" height="200">
+                      <p> {{ picDesc }}</p>
+                      </div>
+                  {% endfor %}
+              </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+<script>
+    var fromContext = '{{ primaryPic }}';
+</script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+        {% include "footer.html" %}
+</body>
+<script type="text/javascript" src="static/socialMedia/editProfile.js"></script>
+</html>
