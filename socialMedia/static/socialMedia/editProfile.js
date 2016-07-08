@@ -28,7 +28,7 @@ $("#signOutSubmit").click(function(e) {
                     },
                  success: function(){
                      console.log("done");
-                     window.location.replace("http://localhost:8000/");
+                     window.location.replace("/");
                  }
         });
 });
