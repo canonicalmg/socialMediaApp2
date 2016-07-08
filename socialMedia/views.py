@@ -143,7 +143,7 @@ def headerSignInFacebook(request):
         if request.method == "POST":
             data = request.POST.get("data")
             print "data", data
-            userProfile = profile.objects.get(faceBookID=data)
+            userProfile = profile.objects.filter(faceBookID=data).first()
             print "profile", userProfile
             user = userProfile.user
             print "user", user
