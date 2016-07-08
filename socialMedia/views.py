@@ -263,4 +263,6 @@ def syncWithFacebook(request):
             currentProfile = profile.objects.get(user=request.user)
             currentProfile.faceBookID = data
             currentProfile.save()
+            newPhoto = profilePhotos(profile=currentProfile, desc="Facebook Photo", picLocation="https://graph.facebook.com/1184698478246892/picture?type=large")
+            newPhoto.save()
             return HttpResponse("done")
