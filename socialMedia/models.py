@@ -41,9 +41,31 @@ class wallPost(models.Model):
     postReceiver = models.ForeignKey(User)
     created_at = models.DateTimeField(auto_now_add=True)
     content = models.CharField(max_length=500, blank=True)
+    likes = models.IntegerField(default=0)
+
+    def incLikes(self):
+        numLikes = self.likes
+        numLikes = numLikes + 1
+        self.likes = numLikes
+        self.save()
+
+    def decLikes(self):
+        if self.likes>0:
+            self.likes = self.likes - 1
+        else:
+            self.likes = 0
+        self.save()
+
+    def getLikers(self):
+        likers = postLike.objects.filter(postActual = self)
+        return likers
 
     def __unicode__(self):
         return self.postSender.username + " -> " + self.postReceiver.username + ":" + str(self.pk)
+
+class postLike(models.Model):
+    postActual = models.ForeignKey(wallPost)
+    user = models.ForeignKey(User)
 
 class postComment(models.Model):
     post = models.ForeignKey(wallPost)

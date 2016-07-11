@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^$', views.signUpLogIn, name='signUp'),
     url(r'^home$', views.home, name='home'),
     url(r'^commentToPost$', views.commentToPost, name='commentToPost'),
+    url(r'^likePost$', views.likePost, name='likePost'),
     url(r'^searchUsers$', views.searchUsers, name='searchUsers'),
     url(r'^editProfile$', views.editProfile, name='editProfile'),
     url(r'^editProfile/uploadPic$', views.uploadPic, name='uploadPic'),

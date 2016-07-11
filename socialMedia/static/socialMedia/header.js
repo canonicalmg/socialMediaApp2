@@ -72,10 +72,17 @@ $("#userSearch").click(function(e){
                         'data': searchTerm,
                         },
                  success: function(data){
-                     $("#myModalLabel").text("Search results for: " + searchTerm);
+                     $(".snip1344").remove();
                      $(".modal-body").empty();
-                     for(var i=0; i < data.users.length; i++) {
-                         $(".modal-body").append(userTemplate(data.users[i]));
+                     if(data.error == "No result found"){
+                         console.log("No result found in search");
+                         $(".modal-body").append("<p>No Users Found</p>");
+                     }
+                     else {
+                         $("#myModalLabel").text("Search results for: " + searchTerm);
+                         for (var i = 0; i < data.users.length; i++) {
+                             $(".modal-body").append(userTemplate(data.users[i]));
+                         }
                      }
                  }
             });

@@ -29,16 +29,17 @@
                   <p><a id='uploadProfilePic' class="btn btn-lg btn-success" href="/editProfile/uploadPic" role="button">Upload Picture</a></p>
                   <p><a id='syncWithFacebook' class="btn btn-lg btn-success" role="button">Sync With Facebook Login</a></p>
                   <div id="dialogBox" style="display:none;">
-                      <fb:login-button scope='public_profile,email' onlogin='checkLoginState();'></fb:login-button>
+                      <fb:login-button scope='public_profile,email' onlogin='checkLoginState2();'></fb:login-button>
                     </div>
                     <div id="status">
                         </div>
               </div>
               <div id='secondaryPictures' class="col-md-8">
+                    <p>Select a picture to set it as your primary profile picture.</p>
                   {% for secondaryPic, picDesc, picID in secondaryPics %}
                       <div>
                       <img src="{{ secondaryPic }}" id="secondary{{ picID }}" class="img-rounded secondaryPic" width="200" height="200">
-                      <p> {{ picDesc }}</p>
+                      <p> "{{ picDesc }}"</p>
                       </div>
                   {% endfor %}
               </div>

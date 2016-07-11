@@ -102,31 +102,37 @@
             <form class="form-inline center-block">
                 <div class="form-group">
                     <label for="signUpFirstName">First Name</label>
-                    <input type="text" class="form-control" id="signUpFirstName" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="signUpFirstName" placeholder="Jane">
                 </div>
                 <div class="form-group">
                     <label for="signUpLastName">Last Name</label>
-                    <input type="email" class="form-control" id="signUpLastName" placeholder="jane.doe@example.com">
+                    <input type="email" class="form-control" id="signUpLastName" placeholder="Doe">
                 </div>
             </form>
         <form class="form-horizontal">
             {% csrf_token %}
             <div class="form-group">
-                <label for="signUpEmail" class="col-sm-2 control-label">Email</label>
+                <label for="signUpEmail" class="col-sm-2 control-label">Username</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="signUpEmail" placeholder="Email">
+                    <input class="form-control" id="signUpEmail" placeholder="Username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signUpEmail2" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="signUpEmail2" placeholder="janeDoe@yourEmail.com">
                 </div>
             </div>
             <div class="form-group">
                 <label for="signUpPassword" class="col-sm-2 control-label">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="signUpPassword" data-toggle="tooltip" title="Password must be at least 8 characters" placeholder="Password">
                 </div>
             </div>
             <div class="form-group">
                 <label for="signUpPasswordCon" class="col-sm-2 control-label">Password(Confirm)</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="signUpPasswordCon" placeholder="Password">
+                    <input type="password" class="form-control" id="signUpPasswordCon" data-toggle="tooltip" title="Password must be at least 8 characters" placeholder="Password">
                 </div>
             </div>
             <!--<label class="radio-inline">

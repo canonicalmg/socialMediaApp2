@@ -66,7 +66,7 @@ $("#editDesc").click(function(e){
 $(".secondaryPic").click(function(e){
    e.preventDefault();
     console.log("clicked");
-    $("#dialogBox").append("<p>Make this picture your default?</p>");
+    //$("#dialogBox").append("<p>Make this picture your default?</p>");
     var id= (this.id).split("secondary")[1];
     var picSrc = (this.src).split("/images/")[1];
     var originalPrimary = ($("#primaryPicActual")[0].src).split("/images/")[1];
@@ -109,9 +109,11 @@ $(".secondaryPic").click(function(e){
 $("#syncWithFacebook").click(function(e){
    e.preventDefault();
     $("#dialogBox").show();
-    
+    console.log("syncing");
+});
 
-    function statusChangeCallback(response) {
+
+function statusChangeCallback2(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -120,7 +122,26 @@ $("#syncWithFacebook").click(function(e){
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
+      //testAPI();
+        $("#dialogBox").empty();
+
+        $.ajax({
+                 type:"POST",
+                 url:"/editProfile/syncWithFacebook",
+                 headers : {
+                        "X-CSRFToken": getCookie("csrftoken")
+                    },
+                 data: {
+                        'data': response.id,
+                        },
+                 success: function(data){
+                     console.log("done");
+                     if(data == "Profile already linked"){
+                         document.getElementById('status').innerHTML =
+                        'Account is already linked!';
+                     }
+                 }
+            });
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -136,9 +157,10 @@ $("#syncWithFacebook").click(function(e){
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
-  function checkLoginState() {
+  function checkLoginState2() {
+      console.log("inside check login state");
     FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
+      statusChangeCallback2(response);
     });
   }
 
@@ -163,9 +185,9 @@ $("#syncWithFacebook").click(function(e){
   //
   // These three cases are handled in the callback function.
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+  /*FB.getLoginStatus2(function(response) {
+    statusChangeCallback2(response);
+  });*/
 
   };
 
@@ -198,63 +220,12 @@ $("#syncWithFacebook").click(function(e){
                  data: {
                         'data': response.id,
                         },
-                 success: function(){
+                 success: function(data){
                      console.log("done");
-                 }
-            });
-    });
-  }
-
-});
-
-function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-
-function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
-
-function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-        console.log(response);
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for syncing your account, ' + response.name + '!';
-        $("#dialogBox").empty();
-
-        $.ajax({
-                 type:"POST",
-                 url:"/editProfile/syncWithFacebook",
-                 headers : {
-                        "X-CSRFToken": getCookie("csrftoken")
-                    },
-                 data: {
-                        'data': response.id,
-                        },
-                 success: function(){
-                     console.log("done");
+                     if(data == "Profile already linked"){
+                         document.getElementById('status').innerHTML =
+                        'Account is already linked!';
+                     }
                  }
             });
     });

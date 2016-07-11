@@ -68,6 +68,7 @@ $("#submitSignUp").click(function(e) {
     var firstName = $("#signUpFirstName").val() || null;
     var lastName = $("#signUpLastName").val() || null;
     var email = $("#signUpEmail").val() || null;
+    var email2 = $("#signUpEmail2").val() || null;
     var pass = $("#signUpPassword").val() || null;
     var passCon = $("#signUpPasswordCon").val();
 
@@ -92,7 +93,7 @@ $("#submitSignUp").click(function(e) {
         $("#errorCode").append("<p>Error: Passwords do not match</p>");
         return false;
     }
-    var userData = [firstName, lastName, email, passCon];
+    var userData = [firstName, lastName, email, passCon, email2];
     //ajax request to server
     token = $("#change_password-form").find('input[name=csrfmiddlewaretoken]').val()
     $.ajax({
@@ -104,9 +105,16 @@ $("#submitSignUp").click(function(e) {
                  data: {
                         'data': userData,
                         },
-                 success: function(){
-                     console.log("done");
-                     window.location.replace("/home#");
+                 success: function(data){
+                     if(data == "Error: Username already exists."){
+                         console.log("Error: Username already exists.");
+                         $("#errorCode").append("<p>A user with that username already exists!</p>");
+                         return false;
+                     }
+                     else {
+                         console.log("done");
+                         window.location.replace("/home#");
+                     }
                  }
             });
 
