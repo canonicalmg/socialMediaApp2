@@ -150,6 +150,8 @@ def headerSignIn(request):
                 if user.is_active:
                     login(request, user)
                     return HttpResponse("return this string")
+            else:
+                return HttpResponse("Does not match")
 
 def headerSignInFacebook(request):
     print "entered"

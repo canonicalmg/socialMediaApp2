@@ -54,9 +54,16 @@ function headerSignIn(email, pass){
                  data: {
                         'data': userData,
                         },
-                 success: function(){
-                     console.log("done");
-                     window.location.replace("/home#");
+                 success: function(data){
+                     $("#dialogBoxLogin").empty();
+                     if(data == "Does not match"){
+                         $("#dialogBoxLogin").append("<p style='color:white;'>Username and password do not match our records</p>");
+                         return 0;
+                     }
+                     else {
+                         console.log("done");
+                         window.location.replace("/home#");
+                     }
                  }
         });
 }
