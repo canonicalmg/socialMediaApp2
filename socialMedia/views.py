@@ -76,7 +76,7 @@ def uploadPic(request):
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
             currentProfile = profile.objects.get(user=request.user)
-            profileSecondaryPic = profilePhotos(profile=currentProfile,desc="testDesc", picLocation=request.FILES['docfile'])
+            profileSecondaryPic = profilePhotos(profile=currentProfile,desc=request.POST['description2'], picLocation=request.FILES['docfile'])
             #newdoc = Document(docfile = request.FILES['docfile'])
             profileSecondaryPic.save()
 
