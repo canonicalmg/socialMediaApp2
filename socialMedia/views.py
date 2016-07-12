@@ -18,7 +18,8 @@ def signUpLogIn(request):
         return HttpResponseRedirect("home")
     else:
         #display sign in/sign up
-        template = loader.get_template('signUpLogin.html')
+        #template = loader.get_template('signUpLogin.html')
+        template = loader.get_template('headerLogin.html')
         logForm = loginForm()
         context = {
             'loginForm': logForm

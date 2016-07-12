@@ -125,6 +125,7 @@ function likeComment(pk){
                      if(data == "Incremented Like"){
                          $("#postLike"+pk).html(parseInt($("#postLike"+pk).html()) + 1);
                          console.log($("#postLike"+pk).html());
+                         $("#")
                      }
                      else if(data == "Decremented Like"){
                         $("#postLike"+pk).html(parseInt($("#postLike"+pk).html()) - 1);

@@ -1,0 +1,174 @@
+{% extends "baseLogin.html" %}
+{% load static %}
+<!-- Latest compiled and minified CSS -->
+{% block header %}<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Pretty cool social media functions">
+    <meta name="author" content="Marcus Graves">
+
+    <title>Social Media Site</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Social Media Project</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input id="signInEmail" type="text" placeholder="Username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input id="signInPass" type="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" id="signInSubmit" class="btn btn-success">Sign in</button>
+                <div id="dialogBoxLogin"></div>
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>
+{% endblock %}
+
+{% block sidebar %} {% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div id="join1">
+        <div class="container">
+            <h1>Join us</h1>
+            <p>join the fastest growing social media network for new developers now</p>
+            <p><a id='signUpButton' class="btn btn-primary btn-lg" href="#" role="button">Sign Up &raquo;</a></p>
+        </div>
+    </div>
+    <div id="join2" class="center" style="display:none;">
+        <div class="container">
+            <h1>Great!</h1>
+            <p>You're almost there! Fill out the information below</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div id='main1'>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Post to walls</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" disabled="disabled" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Post to other people's walls</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" disabled="disabled" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Comment and view profiles</h2>
+            <p>Donec swed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" disabled="disabled" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+    </div>
+    <div id="main2" style="display:none;">
+            <form class="form-inline center-block">
+                <div class="form-group">
+                    <label for="signUpFirstName">First Name</label>
+                    <input type="text" class="form-control" id="signUpFirstName" placeholder="Jane">
+                </div>
+                <div class="form-group">
+                    <label for="signUpLastName">Last Name</label>
+                    <input type="email" class="form-control" id="signUpLastName" placeholder="Doe">
+                </div>
+            </form>
+        <form class="form-horizontal">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="signUpEmail" class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="signUpEmail" placeholder="Username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signUpEmail2" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="signUpEmail2" placeholder="janeDoe@yourEmail.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signUpPassword" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="signUpPassword" data-toggle="tooltip" title="Password must be at least 8 characters" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signUpPasswordCon" class="col-sm-2 control-label">Password(Confirm)</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="signUpPasswordCon" data-toggle="tooltip" title="Password must be at least 8 characters" placeholder="Password">
+                </div>
+            </div>
+            <!--<label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="signUpMale" value="option1"> Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="signUpFemale" value="option2"> Female
+            </label>-->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="submitSignUp" type="submit" class="btn btn-default">Sign up</button>
+                    <button id="cancelSignUp" type="submit" class="btn btn-default">Cancel</button>
+                </div>
+            </div>
+            <div id="errorCode">
+
+            </div>
+
+<div id="status">
+</div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <hr>
+
+    <footer>
+        <p>&copy; 2016 Bixly, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+<script type="text/javascript" src="static/socialMedia/signUpLogin.js"></script>
+
+</html>
+{% endblock %}
