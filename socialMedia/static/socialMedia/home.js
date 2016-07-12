@@ -1,3 +1,28 @@
+
+$("#writeToWallHome").click(function(e) {
+    e.preventDefault();
+    //get wall text
+    var wallText = $("#wallTextArea").val();
+    var userID = userName;
+    //var userID = window.location.pathname.split("/user/")[1];
+    //userID = userID.replace('/','');
+    $.ajax({
+                 type:"POST",
+                 url:"/user/" + userID + "/writeToWall/",
+                 headers : {
+                        "X-CSRFToken": getCookie("csrftoken")
+                    },
+                 data: {
+                        'data': [wallText, userID],
+                        },
+                 success: function(){
+                     console.log("done");
+                     //retrievePosts(userID);
+                     window.location.reload()
+                 }
+            });
+});
+
 function postNewComment(pk){
     var comment = $("#wallCommentVal" + pk).val();
      $.ajax({
