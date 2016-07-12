@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^user/(?P<string>[\w\-]+)/getWallPosts/$', views.getWallPosts, name='getWallPosts'),
     url(r'^newUserSignUp/$', views.newUserSignUp, name='newUserSignUp'),
     url(r'^headerSignIn/$', views.headerSignIn, name='headerSignIn'),
+    url(r'^headerSignIn2/$', views.headerSignIn2, name='headerSignIn2'),
     url(r'^headerSignInFacebook/$', views.headerSignInFacebook, name='headerSignInFacebook'),
     url(r'^headerSignOut/$', views.headerSignOut, name='headerSignOut'),
 ]

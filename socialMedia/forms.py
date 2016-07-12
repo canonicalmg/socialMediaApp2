@@ -9,5 +9,5 @@ class DocumentForm(forms.Form):
         widget=forms.Textarea(attrs={'placeholder': 'Please enter the  description'}))
 
 class loginForm(forms.Form):
-    userName = forms.CharField(label='Username', max_length=100)
-    password = forms.CharField(widget=forms.PasswordInput())
+    userName = forms.CharField(label='Username', max_length=100, widget=forms.TextInput(attrs={'class': "form-control", 'placeholder':"Username"}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': "form-control", 'placeholder':"Password"}))

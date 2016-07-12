@@ -33,7 +33,7 @@ $("#cancelSignUp").click(function(){
 
 
 
-$("#signInSubmit").click(function(e) {
+/*$("#signInSubmit").click(function(e) {
     e.preventDefault();
     var email = $("#signInEmail").val() || null;
     var pass = $("#signInPass").val() || null;
@@ -42,7 +42,7 @@ $("#signInSubmit").click(function(e) {
     if((email != null) && (pass != null)){
        headerSignIn(email,pass);
     }
-});
+});*/
 
 function headerSignIn(email, pass){
     var userData = [email, pass];

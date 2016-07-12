@@ -46,7 +46,9 @@
                         </div>
                           {% for comment in comments %}
                               <div class="postComment">
-                                <p> <a href="/user/{{ comment.commentSender.username }}"> {{ comment.commentSender.username }}</a>: {{ comment.content }}</p>
+                                <p> <a href="/user/{{ comment.commentSender.username }}"> {{ comment.commentSender.username }}</a>:
+                                    {{ comment.content }}
+                                </p>
                               </div>
                           {% endfor %}
                                 <div style="display:flex;" class="postComment sendComment">

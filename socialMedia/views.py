@@ -17,10 +17,25 @@ def signUpLogIn(request):
         #send them to /home
         return HttpResponseRedirect("home")
     else:
+        logForm = loginForm(request.POST or None)
+        if request.POST:
+            #form = loginForm(request.POST)
+            if logForm.is_valid():
+                data = logForm.cleaned_data
+                # username = data['userName']
+                # password = data['password']
+                username = data.get('userName', "")
+                password = data.get('password', "")
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    if user.is_active:
+                        login(request, user)
+                        return HttpResponseRedirect("/home")
+                else:
+                    return HttpResponseRedirect("/")
         #display sign in/sign up
         #template = loader.get_template('signUpLogin.html')
         template = loader.get_template('headerLogin.html')
-        logForm = loginForm()
         context = {
             'loginForm': logForm
         }
@@ -142,6 +157,21 @@ def newUserSignUp(request):
             else:
                 return HttpResponse("Error: Username already exists.")
 
+def headerSignIn2(request):
+    form = loginForm(request.POST)
+    if form.is_valid():
+        data = form.cleaned_data
+        # username = data['userName']
+        # password = data['password']
+        username = data.get('userName', "")
+        password = data.get('password', "")
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return HttpResponseRedirect("/home")
+        else:
+            return HttpResponseRedirect("/")
 
 def headerSignIn(request):
     print "entered"
