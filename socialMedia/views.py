@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from .models import profile, profilePhotos, profilePrimaryPic, wallPost, postComment, postLike
 from django.contrib.auth import authenticate,login, logout
 import json
-from .forms import DocumentForm
+from .forms import DocumentForm, loginForm
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
@@ -19,8 +19,9 @@ def signUpLogIn(request):
     else:
         #display sign in/sign up
         template = loader.get_template('signUpLogin.html')
+        logForm = loginForm()
         context = {
-
+            'loginForm': logForm
         }
         return HttpResponse(template.render(context, request))
 
@@ -139,6 +140,7 @@ def newUserSignUp(request):
                 #return HttpResponse(template.render(context, request))
             else:
                 return HttpResponse("Error: Username already exists.")
+
 
 def headerSignIn(request):
     print "entered"

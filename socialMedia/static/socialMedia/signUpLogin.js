@@ -35,9 +35,10 @@ $("#cancelSignUp").click(function(){
 
 $("#signInSubmit").click(function(e) {
     e.preventDefault();
-    var email = $("#signInEmail").val() || null;
-    var pass = $("#signInPass").val() || null;
-
+    //var email = $("#signInEmail").val() || null;
+    //var pass = $("#signInPass").val() || null;
+    var email = $("#id_userName").val() || null;
+    var pass = $("#id_password").val() || null;
     if((email != null) && (pass != null)){
        headerSignIn(email,pass);
     }
