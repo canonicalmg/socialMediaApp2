@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="">
+    <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="fixing twilio pagelaod bug">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/views.py" afterPath="$PROJECT_DIR$/socialMedia/views.py" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="300" column="19" selection-start-line="300" selection-start-column="19" selection-end-line="300" selection-end-column="19" />
+            <state relative-caret-position="389">
+              <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="329" selection-end-column="82" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -74,11 +74,9 @@
       <file leaf-file-name="userProfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="38" column="99" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
-              <folding>
-                <marker date="1468436069644" expanded="true" signature="3157:3520" ph="{% if videoURL != None ... %}" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -775,7 +773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468438261176</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fixing twilio pagelaod bug">
+      <created>1468438718076</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1468438718076</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1262,18 +1267,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="99" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
-          <folding>
-            <marker date="1468436069644" expanded="true" signature="3157:3520" ph="{% if videoURL != None ... %}" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="300" column="19" selection-start-line="300" selection-start-column="19" selection-end-line="300" selection-end-column="19" />
+        <state relative-caret-position="389">
+          <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="329" selection-end-column="82" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>

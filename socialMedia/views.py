@@ -290,8 +290,7 @@ def headerSignOut(request):
 def userProfile(request, string):
     if User.objects.filter(username=string).exists():
         #title, primary pic, about me
-        # try:
-        if True:
+        try:
             template = loader.get_template('userProfile.html')
             currentUser = User.objects.get(username=string)
             currentProfile = profile.objects.get(user=currentUser)
@@ -307,6 +306,7 @@ def userProfile(request, string):
                 sendingProfile = profile.objects.get(user=sendingUser)
                 #profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
                 #profilePrimary = profilePrimaryPic.objects.get(profile=j.postSender.profile.profileprimarypic_set.first())
+                videoURL = None
                 if "youtube.com" in j.content:
                     videoURL = video_id(j.content)
                 postComments = postComment.objects.filter(post=j)
@@ -325,9 +325,9 @@ def userProfile(request, string):
                 {"primaryPic": profilePrimary.profilePic.picLocation.url, 'wallPosts': sendThesePosts,
                 "aboutMe": currentProfile.aboutMe, "title": currentUser.username + "(" + currentUser.first_name + ")", "phoneNumber": userPhoneNumber},
                 request))
-        # except Exception as e:
-        #     #return '%s (%s)' % (e.message, type(e))
-        #     return HttpResponse("Error, Profile not initialized properly. error:")
+        except Exception as e:
+            #return '%s (%s)' % (e.message, type(e))
+            return HttpResponse("Error, Profile not initialized properly. error:")
     else:
         return HttpResponse("User does not exist")
 
