@@ -480,7 +480,7 @@ def incomingSMS(request):
             newPost = wallPost(postSender=currentUser, postReceiver=currentUser, content=body)
             newPost.save()
         if action == "postuser":
-            sendTo = content['user']
+            sendTo = User.objects.get(username=content['user'])
             currentUser = User.objects.get(username="SMSBot")
             newPost = wallPost(postSender=currentUser, postReceiver=sendTo, content=body)
             newPost.save()

@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
-              <caret line="479" column="93" selection-start-line="479" selection-start-column="93" selection-end-line="479" selection-end-column="93" />
+              <caret line="482" column="63" selection-start-line="482" selection-start-column="63" selection-end-line="482" selection-end-column="63" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -864,7 +864,21 @@
       <option name="project" value="LOCAL" />
       <updated>1468449851999</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="trying twilio receive text">
+      <created>1468450434093</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1468450434093</updated>
+    </task>
+    <task id="LOCAL-00034" summary="trying twilio receive text">
+      <created>1468452548008</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1468452548008</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1355,7 +1369,7 @@
     <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
-          <caret line="479" column="93" selection-start-line="479" selection-start-column="93" selection-end-line="479" selection-end-column="93" />
+          <caret line="482" column="63" selection-start-line="482" selection-start-column="63" selection-end-line="482" selection-end-column="63" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
