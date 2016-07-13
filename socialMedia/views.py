@@ -13,6 +13,7 @@ from django.db.models import Q
 import urlparse as ups
 from twilio.rest import TwilioRestClient
 import re
+from django.views.decorators.csrf import csrf_exempt
 
 def sendSMS(request):
     if request.is_ajax():
@@ -463,7 +464,7 @@ def addChangePhoneNumber(request):
             else:
                 print "did not match"
                 return HttpResponse("Invalid Format")
-
+@csrf_exempt
 def incomingSMS(request):
     if request.method == "POST":
         print "all =", request
