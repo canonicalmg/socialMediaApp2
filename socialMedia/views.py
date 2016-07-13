@@ -471,7 +471,10 @@ def incomingSMS(request):
         print "PRINTING ", request.body
         currentUser = User.objects.get(username="marcusg")
         currentProfile = profile.objects.get(user=currentUser)
-        content = request.POST.get('Body', '')
-        currentProfile.aboutMe = content
+        content = request.POST.get('Body', '') #action=wallpost, body="this is the body text"
+        content = json.loads(content)
+        action = content.action
+        body = content.body
+        currentProfile.aboutMe = content + "&&" + action + "%%" + body
         currentProfile.save()
         return HttpResponse("done")
