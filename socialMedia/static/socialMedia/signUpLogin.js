@@ -69,7 +69,7 @@ function headerSignIn(email, pass){
         });
 }
 
-$("#submitSignUp").click(function(e) {
+/*$("#submitSignUp").click(function(e) {
     e.preventDefault();
     $("#errorCode").empty();
     //gather info
@@ -130,7 +130,7 @@ $("#submitSignUp").click(function(e) {
 
 
     //redirect to home
-});
+});*/
 
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');

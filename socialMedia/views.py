@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from .models import profile, profilePhotos, profilePrimaryPic, wallPost, postComment, postLike
 from django.contrib.auth import authenticate,login, logout
 import json
-from .forms import DocumentForm, loginForm
+from .forms import DocumentForm, loginForm, userRegistration
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
@@ -18,6 +18,7 @@ def signUpLogIn(request):
         return HttpResponseRedirect("home")
     else:
         logForm = loginForm(request.POST or None)
+        registerForm = userRegistration(request.POST or None)
         if request.POST:
             #form = loginForm(request.POST)
             if logForm.is_valid():
@@ -33,11 +34,42 @@ def signUpLogIn(request):
                         return HttpResponseRedirect("/home")
                 else:
                     return HttpResponseRedirect("/")
+            if registerForm.is_valid():
+                print request.POST
+                instance = registerForm.save()
+                data = registerForm.cleaned_data
+                instance.set_password(data.get('password'))
+                newPass = data.get('password')
+                instance.save()
+                # create profile
+                newUser = User.objects.get(username=data.get('username', ""))
+                print "newUser", newUser
+                newProfile = profile(user=newUser)
+                newProfile.save()
+
+                # create profilePic
+                newProfile = profile.objects.get(user=newUser)
+                print "newProfile", newProfile
+                newPhoto = profilePhotos(profile=newProfile, desc="Temporary Photo", picLocation="/images/blank.jpg")
+                newPhoto.save()
+
+                # create profilePrimaryPic
+                newPhoto = profilePhotos.objects.get(profile=newProfile)
+                print "newPhoto", newPhoto
+                newPrimary = profilePrimaryPic(profile=newProfile, profilePic=newPhoto)
+                newPrimary.save()
+                #user = authenticate(username=data.get('username', ""), password=data.get('password', ""))
+                user = authenticate(username=newUser.username, password=newPass)
+                if user is not None:
+                    if user.is_active:
+                        login(request, user)
+                return HttpResponseRedirect('/')
         #display sign in/sign up
         #template = loader.get_template('signUpLogin.html')
         template = loader.get_template('headerLogin.html')
         context = {
-            'loginForm': logForm
+            'loginForm': logForm,
+            'registerForm': registerForm
         }
         return HttpResponse(template.render(context, request))
 
@@ -205,10 +237,11 @@ def headerSignInFacebook(request):
                     return HttpResponse("return this string")
 
 def headerSignOut(request):
-    print "entered"
+    logout(request)
     if request.is_ajax():
-        logout(request)
         return HttpResponse("return this string")
+    else:
+        return HttpResponseRedirect("/")
 
 def userProfile(request, string):
     if User.objects.filter(username=string).exists():

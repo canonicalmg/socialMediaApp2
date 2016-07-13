@@ -110,7 +110,7 @@
     </div>
     </div>
     <div id="main2" style="display:none;">
-            <form class="form-inline center-block">
+            <!--<form class="form-inline center-block">
                 <div class="form-group">
                     <label for="signUpFirstName">First Name</label>
                     <input type="text" class="form-control" id="signUpFirstName" placeholder="Jane">
@@ -121,7 +121,7 @@
                 </div>
             </form>
         <form class="form-horizontal">
-            {% csrf_token %}
+{#            {% csrf_token %}#}
             <div class="form-group">
                 <label for="signUpEmail" class="col-sm-2 control-label">Username</label>
                 <div class="col-sm-10">
@@ -145,6 +145,37 @@
                 <div class="col-sm-10">
                     <input type="password" class="form-control" id="signUpPasswordCon" data-toggle="tooltip" title="Password must be at least 8 characters" placeholder="Password">
                 </div>
+            </div>-->
+        <form class="form-horizontal center-block" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ registerForm.name }}" class="control-label">{{ registerForm.first_name.label }}</label>
+                {{ registerForm.first_name.errors }}
+                {{ registerForm.first_name }}
+            </div>
+            <div class="form-group">
+                <label for="{{ registerForm.name }}" class="control-label">{{ registerForm.last_name.label }}</label>
+                {{ registerForm.last_name.errors }}
+                {{ registerForm.last_name }}
+            </div>
+            <div class="form-group">
+                <label for="{{ registerForm.name }}" class="control-label">{{ registerForm.username.label }}</label>
+                {{ registerForm.username.errors }}
+                {{ registerForm.username }}
+            </div>
+            <div class="form-group">
+                <label for="{{ registerForm.name }}" class="control-label">{{ registerForm.email.label }}</label>
+                {{ registerForm.email.errors }}
+                {{ registerForm.email }}
+            </div>
+            <div class="form-group">
+                <label for="{{ registerForm.name }}" class="control-label">{{ registerForm.password.label }}</label>
+                {{ registerForm.password.errors }}
+                {{ registerForm.password }}
+            </div>
+            <div class="form-group">
+                <button id="submitSignUp" type="submit" class="btn btn-default">Sign up</button>
+                <button id="cancelSignUp" type="submit" class="btn btn-default">Cancel</button>
             </div>
             <!--<label class="radio-inline">
                 <input type="radio" name="inlineRadioOptions" id="signUpMale" value="option1"> Male
@@ -152,18 +183,18 @@
             <label class="radio-inline">
                 <input type="radio" name="inlineRadioOptions" id="signUpFemale" value="option2"> Female
             </label>-->
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button id="submitSignUp" type="submit" class="btn btn-default">Sign up</button>
-                    <button id="cancelSignUp" type="submit" class="btn btn-default">Cancel</button>
-                </div>
-            </div>
-            <div id="errorCode">
+{#            <div class="form-group">#}
+{#                <div class="col-sm-offset-2 col-sm-10">#}
+{#                    <button id="submitSignUp" type="submit" class="btn btn-default">Sign up</button>#}
+{#                    <button id="cancelSignUp" type="submit" class="btn btn-default">Cancel</button>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div id="errorCode">#}
+{##}
+{#            </div>#}
 
-            </div>
-
-<div id="status">
-</div>
+{#<div id="status">#}
+{#</div>#}
         </form>
     </div>
 {% endblock %}
