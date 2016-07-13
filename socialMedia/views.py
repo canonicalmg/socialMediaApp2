@@ -473,8 +473,8 @@ def incomingSMS(request):
         currentProfile = profile.objects.get(user=currentUser)
         content = request.POST.get('Body', '') #action=wallpost, body="this is the body text"
         content = json.loads(content)
-        action = content.action
-        body = content.body
+        action = content['action']
+        body = content['body']
         currentProfile.aboutMe = content + "&&" + action + "%%" + body
         currentProfile.save()
         return HttpResponse("done")
