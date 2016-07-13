@@ -471,6 +471,6 @@ def incomingSMS(request):
         print "PRINTING ", request.body
         currentUser = User.objects.get(username="marcusg")
         currentProfile = profile.objects.get(user=currentUser)
-        currentProfile.aboutMe = request.body
+        currentProfile.aboutMe = request.url.query.Body
         currentProfile.save()
         return HttpResponse("done")
