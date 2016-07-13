@@ -479,6 +479,11 @@ def incomingSMS(request):
             currentUser = User.objects.get(username="SMSBot")
             newPost = wallPost(postSender=currentUser, postReceiver=currentUser, content=body)
             newPost.save()
+        if action == "postuser":
+            sendTo = content['user']
+            currentUser = User.objects.get(username="SMSBot")
+            newPost = wallPost(postSender=currentUser, postReceiver=sendTo, content=body)
+            newPost.save()
         #currentProfile.aboutMe = action + "%%" + body
         currentProfile.save()
         return HttpResponse("done")
