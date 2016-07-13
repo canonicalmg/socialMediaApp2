@@ -475,6 +475,6 @@ def incomingSMS(request):
         content = json.loads(content)
         action = content['action']
         body = content['body']
-        currentProfile.aboutMe = content + "&&" + action + "%%" + body
+        currentProfile.aboutMe = action + "%%" + body
         currentProfile.save()
         return HttpResponse("done")
