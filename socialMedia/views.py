@@ -463,3 +463,13 @@ def addChangePhoneNumber(request):
             else:
                 print "did not match"
                 return HttpResponse("Invalid Format")
+
+def incomingSMS(request):
+    if request.method == "POST":
+        print "all =", request
+        print "PRINTING ", request.body
+        currentUser = User.objects.get(username="marcusg")
+        currentProfile = profile.objects.get(user=currentUser)
+        currentProfile.aboutMe = request.body
+        currentProfile.save()
+        return HttpResponse("done")

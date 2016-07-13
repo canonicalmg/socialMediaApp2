@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/urls.py" afterPath="$PROJECT_DIR$/socialMedia/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/views.py" afterPath="$PROJECT_DIR$/socialMedia/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMediaApp/settings.py" afterPath="$PROJECT_DIR$/socialMediaApp/settings.py" />
     </list>
     <ignored path="socialMediaApp.iws" />
@@ -19,17 +21,20 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="socialMediaApp" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="329" selection-end-column="82" />
+            <state relative-caret-position="327">
+              <caret line="465" column="0" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -40,18 +45,18 @@
       <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="0">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMediaApp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="179">
+              <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -60,7 +65,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMedia/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="216">
               <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="57" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -72,11 +77,9 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMedia/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-              <folding>
-                <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,7 +87,7 @@
       <file leaf-file-name="userProfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="-8">
               <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="48" />
               <folding />
             </state>
@@ -94,7 +97,7 @@
       <file leaf-file-name="userProfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="0">
               <caret line="154" column="66" selection-start-line="154" selection-start-column="66" selection-end-line="154" selection-end-column="66" />
               <folding />
             </state>
@@ -104,7 +107,7 @@
       <file leaf-file-name="editProfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/editProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="-8">
               <caret line="31" column="157" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
               <folding />
             </state>
@@ -114,7 +117,7 @@
       <file leaf-file-name="editProfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
+            <state relative-caret-position="161">
               <caret line="262" column="45" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
               <folding>
                 <marker date="1468434302397" expanded="true" signature="2782:2802" ph="..." />
@@ -128,7 +131,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="-8">
               <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="49" selection-end-column="39" />
               <folding />
             </state>
@@ -162,12 +165,12 @@
         <option value="$PROJECT_DIR$/socialMedia/models.py" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" />
         <option value="$PROJECT_DIR$/templates/editProfile.html" />
-        <option value="$PROJECT_DIR$/socialMedia/urls.py" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
         <option value="$PROJECT_DIR$/templates/userProfile.html" />
-        <option value="$PROJECT_DIR$/socialMedia/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/socialMediaApp/settings.py" />
+        <option value="$PROJECT_DIR$/socialMedia/urls.py" />
+        <option value="$PROJECT_DIR$/socialMedia/views.py" />
       </list>
     </option>
   </component>
@@ -364,7 +367,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -793,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468440033509</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="changed to postgres locally">
+      <created>1468444345911</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1468444345912</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -840,7 +850,8 @@
     <MESSAGE value="Added twilio sms and video embed" />
     <MESSAGE value="fixing twilio pagelaod bug" />
     <MESSAGE value="updated requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated requirements" />
+    <MESSAGE value="changed to postgres locally" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to postgres locally" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -873,9 +884,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-          <folding>
-            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -972,9 +981,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,9 +1049,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,37 +1212,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/editProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
+        <state relative-caret-position="-8">
           <caret line="31" column="157" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="0">
           <caret line="154" column="66" selection-start-line="154" selection-start-column="66" selection-end-line="154" selection-end-column="66" />
           <folding />
         </state>
@@ -1245,15 +1230,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
+        <state relative-caret-position="-8">
           <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="49" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="161">
           <caret line="262" column="45" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
           <folding>
             <marker date="1468434302397" expanded="true" signature="2782:2802" ph="..." />
@@ -1263,37 +1264,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
+    <entry file="file://$PROJECT_DIR$/socialMediaApp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="48" />
+        <state relative-caret-position="179">
+          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMedia/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMedia/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="329" selection-end-column="82" />
+        <state relative-caret-position="327">
+          <caret line="465" column="0" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socialMediaApp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
