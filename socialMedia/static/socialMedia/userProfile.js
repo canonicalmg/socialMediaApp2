@@ -134,3 +134,25 @@ function likeComment(pk){
                  }
             });
 }
+
+$("#sendSMS").click(function(e){
+   e.preventDefault();
+    var userID = window.location.pathname.split("/user/")[1];
+    userID = userID.replace('/','');
+    var message = $("#sendSMSMessage").val();
+    $.ajax({
+                 type:"POST",
+                 url:"/sendSMS",
+                 headers : {
+                        "X-CSRFToken": getCookie("csrftoken")
+                    },
+                 data: {
+                        'data': [userID,message],
+                        },
+                 success: function(data){
+                     console.log(data);
+                     $("#sendSMSMessage").val("");
+                     $("#errorMsg").append("<p>Message sent</p>");
+                 }
+            });
+});

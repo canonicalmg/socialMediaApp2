@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/forms.py" afterPath="$PROJECT_DIR$/socialMedia/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/models.py" afterPath="$PROJECT_DIR$/socialMedia/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/urls.py" afterPath="$PROJECT_DIR$/socialMedia/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/views.py" afterPath="$PROJECT_DIR$/socialMedia/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/headerLogin.html" afterPath="$PROJECT_DIR$/templates/headerLogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/editProfile.html" afterPath="$PROJECT_DIR$/templates/editProfile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/userProfile.html" afterPath="$PROJECT_DIR$/templates/userProfile.html" />
     </list>
     <ignored path="socialMediaApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,23 +32,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="signUpLogin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/signUpLogin.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="435">
+              <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socialMedia/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="57" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +59,7 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.virtualenvs/socialMedia/local/lib/python2.7/site-packages/django/core/handlers/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="1935">
               <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding />
             </state>
@@ -63,40 +69,10 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMedia/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baseLogin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/baseLogin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="headerLogin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/headerLogin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="177" column="95" selection-start-line="177" selection-start-column="95" selection-end-line="177" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/socialMedia/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="120">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,9 +81,55 @@
       <file leaf-file-name="userProfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-670">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="150">
+              <caret line="49" column="116" selection-start-line="49" selection-start-column="116" selection-end-line="49" selection-end-column="116" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userProfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="154" column="66" selection-start-line="154" selection-start-column="66" selection-end-line="154" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editProfile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/editProfile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="31" column="157" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editProfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="262" column="45" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
+              <folding>
+                <marker date="1468434302397" expanded="true" signature="2782:2802" ph="..." />
+                <marker date="1468434302397" expanded="true" signature="8750:8764" ph="..." />
+                <marker date="1468434302397" expanded="true" signature="8766:8786" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socialMedia/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,21 +137,9 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+            <state relative-caret-position="244">
+              <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="49" selection-end-column="39" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signUpLogin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-              <folding>
-                <marker date="1468365444088" expanded="true" signature="1876:1888" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,22 +159,22 @@
         <option value="$PROJECT_DIR$/socialMediaApp/settings.py" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/home.css" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/header.js" />
-        <option value="$PROJECT_DIR$/socialMedia/models.py" />
-        <option value="$PROJECT_DIR$/templates/editProfile.html" />
-        <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" />
         <option value="$PROJECT_DIR$/templates/uploadPic.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
-        <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
-        <option value="$PROJECT_DIR$/templates/userProfile.html" />
         <option value="$PROJECT_DIR$/templates/baseLogin.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/home.js" />
-        <option value="$PROJECT_DIR$/socialMedia/urls.py" />
         <option value="$PROJECT_DIR$/templates/signUpLogin.html" />
-        <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js" />
         <option value="$PROJECT_DIR$/templates/headerLogin.html" />
         <option value="$PROJECT_DIR$/socialMedia/forms.py" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/socialMedia/models.py" />
+        <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" />
+        <option value="$PROJECT_DIR$/templates/editProfile.html" />
+        <option value="$PROJECT_DIR$/socialMedia/urls.py" />
+        <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
+        <option value="$PROJECT_DIR$/templates/userProfile.html" />
         <option value="$PROJECT_DIR$/socialMedia/views.py" />
       </list>
     </option>
@@ -206,14 +216,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="socialMediaApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.7.11+ virtualenv at ~/.virtualenvs/socialMedia &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -350,6 +366,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -727,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468355122177</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="using django template for user registration">
+      <created>1468369738042</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1468369738042</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -770,7 +795,8 @@
     <MESSAGE value="Using extends template" />
     <MESSAGE value="Post from home" />
     <MESSAGE value="using django template to log in" />
-    <option name="LAST_COMMIT_MESSAGE" value="using django template to log in" />
+    <MESSAGE value="using django template for user registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="using django template for user registration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -812,7 +838,7 @@
         <state relative-caret-position="90">
           <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
           <folding>
-            <element signature="e#0#32#0" expanded="false" />
+            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -845,7 +871,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="53" column="134" selection-start-line="53" selection-start-column="134" selection-end-line="53" selection-end-column="134" />
-          <folding />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -878,7 +906,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,7 +925,9 @@
         <state relative-caret-position="495">
           <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding>
-            <marker date="1468271658955" expanded="true" signature="2782:2802" ph="..." />
+            <marker date="1468434302397" expanded="true" signature="2782:2802" ph="..." />
+            <marker date="1468434302397" expanded="true" signature="8750:8764" ph="..." />
+            <marker date="1468434302397" expanded="true" signature="8766:8786" ph="..." />
           </folding>
         </state>
       </provider>
@@ -905,7 +937,7 @@
         <state relative-caret-position="90">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding>
-            <element signature="e#0#32#0" expanded="false" />
+            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -914,7 +946,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -973,7 +1007,7 @@
         <state relative-caret-position="75">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
-            <element signature="e#0#32#0" expanded="false" />
+            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1053,36 +1087,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1319">
-          <caret line="224" column="58" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
-          <folding>
-            <marker date="1468271658955" expanded="true" signature="2782:2802" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/uploadPic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editProfile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1111,42 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-670">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="33" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/signUpLogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="885">
           <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -1161,7 +1137,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/signUpLogin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="1980">
           <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
           <folding>
             <marker date="1468365444088" expanded="true" signature="1876:1888" ph="..." />
@@ -1171,7 +1147,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/headerLogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="2655">
           <caret line="177" column="95" selection-start-line="177" selection-start-column="95" selection-end-line="177" selection-end-column="95" />
           <folding />
         </state>
@@ -1187,7 +1163,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="510">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -1197,16 +1173,80 @@
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/socialMedia/local/lib/python2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="1935">
           <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMedia/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/editProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="31" column="157" selection-start-line="31" selection-start-column="157" selection-end-line="31" selection-end-column="157" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMedia/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <marker date="1468434820708" expanded="true" signature="70:1570" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="154" column="66" selection-start-line="154" selection-start-column="66" selection-end-line="154" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="49" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="262" column="45" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
+          <folding>
+            <marker date="1468434302397" expanded="true" signature="2782:2802" ph="..." />
+            <marker date="1468434302397" expanded="true" signature="8750:8764" ph="..." />
+            <marker date="1468434302397" expanded="true" signature="8766:8786" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="49" column="116" selection-start-line="49" selection-start-column="116" selection-end-line="49" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>

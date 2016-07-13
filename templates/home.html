@@ -25,7 +25,7 @@
       <div class="Jumbotron">
                   <h2>Posts</h2>
               <div id="postBag">
-                    {% for sender, content, createdAt, receiver, senderPic, comments, postPK, isLiked, likes, likers in wallPosts %}
+                    {% for sender, content, createdAt, receiver, senderPic, comments, postPK, isLiked, likes, likers, videoURL in wallPosts %}
                       <div class="wallPost">
                         <div class="postSender">
                         {% if sender == receiver %}
@@ -42,7 +42,12 @@
                             {% endif %}
                         </div>
                         <div class="postContent">
-                          <p> {{ content }}</p>
+                            {% if videoURL != None %}
+                                {{ content }}
+                                <iframe width="100%" height="50%" src="https://www.youtube.com/embed/{{ videoURL }}" frameborder="0" allowfullscreen></iframe>
+                            {% else %}
+                                <p> {{ content }}</p>
+                            {% endif %}
                         </div>
                           {% for comment in comments %}
                               <div class="postComment">

@@ -230,3 +230,48 @@ function statusChangeCallback2(response) {
             });
     });
   }
+var originalText = $("#addPhoneNumber").html();
+$("#addPhoneNumber").click(function(e){
+   e.preventDefault();
+    if($("#addPhoneNumber").html() == originalText) {
+        $("#addPhoneNumber").html("Save");
+        $("#addPhoneNumber").val(1);
+        $("#buttonArea").append("<div id='phoneEntryWrap'><input type='text' style='display:block;' class='form-control' placeholder='+12223334444' name='phoneEntry' id='phoneEntry'></div>");
+    }
+    else{
+        var phoneNumberActual = $("#phoneEntry").val();
+        console.log("#=", phoneNumberActual);
+        var id= (this.id).split("secondary")[1];
+        $.ajax({
+                 type:"POST",
+                 url:"/editProfile/addChangePhoneNumber",
+                 headers : {
+                        "X-CSRFToken": getCookie("csrftoken")
+                    },
+                 data: {
+                        'data': [id, phoneNumberActual]
+                        },
+                 success: function(data){
+                     console.log(data)
+                     if(data == "Done"){
+                         console.log("done");
+                         if(originalText == "Add phone number"){
+                             originalText = "Change phone number";
+                         }
+                         $("#addPhoneNumber").html(originalText);
+                         $("#phoneEntryWrap").remove();
+                         if($("#phoneNumVal")){
+                             $("#phoneNumVal").html(phoneNumberActual);
+                         }
+                         else{
+                             $("#buttonArea").append("<p id='phoneNumVal'>" + phoneNumberActual + "</p>");
+                         }
+                     }
+                     else if(data == "Invalid Format"){
+                         console.log("error");
+                         $("#phoneEntryWrap").append("<p>Invalid phone number format. Must be '+12223334444' and at least 9 digits long</p>")
+                     }
+                 }
+            });
+    }
+});

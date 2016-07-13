@@ -18,7 +18,7 @@
       <div class="jumbotron">
         <h1>{{ title }}</h1>
           <div class="row">
-              <div class="col-md-4">
+              <div id='buttonArea' class="col-md-4">
                   <div id="primaryPic">
                     <img src="{{ primaryPic }}" id="primaryPicActual" class="img-rounded" width="304" height="300">
                   </div>
@@ -28,6 +28,11 @@
                   </div>
                   <p><a id='uploadProfilePic' class="btn btn-lg btn-success" href="/editProfile/uploadPic" role="button">Upload Picture</a></p>
                   <p><a id='syncWithFacebook' class="btn btn-lg btn-success" role="button">Sync With Facebook Login</a></p>
+                  {% if phoneNumber != "" %}
+                      <p><a id='addPhoneNumber' class="btn btn-lg btn-success" role="button">Change phone number</a></p><p id="phoneNumVal">{{ phoneNumber }}</p>
+                  {% else %}
+                      <p><a id='addPhoneNumber' class="btn btn-lg btn-success" role="button">Add phone number</a></p><p id="phoneNumVal"></p>
+                  {% endif %}
                   <div id="dialogBox" style="display:none;">
                       <fb:login-button scope='public_profile,email' onlogin='checkLoginState2();'></fb:login-button>
                     </div>

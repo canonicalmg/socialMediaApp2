@@ -10,7 +10,25 @@ from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.http import JsonResponse
 from django.db.models import Q
+import urlparse as ups
+from twilio.rest import TwilioRestClient
+import re
 
+def sendSMS(request):
+    if request.is_ajax():
+        if request.method == "POST":
+            data = request.POST.getlist("data[]")
+            sendTo = data[0] #userName
+            print "sending to ", sendTo
+            sendTo = profile.objects.get(user=User.objects.get(username=sendTo)).phoneNumber
+            sendMessage = data[1]
+            account_sid = "ACcf14924e06a090cabdf9a228a951a09b"
+            auth_token = "8f6a198971603870cefc7855b4b31e62"
+            client = TwilioRestClient(account_sid, auth_token)
+
+            message = client.messages.create(to="+1"+sendTo, from_="+12096907178",
+                                            body=sendMessage + " - from " + request.user.username)
+            return HttpResponse("Sent.")
 
 def signUpLogIn(request):
     if request.user.is_authenticated():
@@ -73,6 +91,18 @@ def signUpLogIn(request):
         }
         return HttpResponse(template.render(context, request))
 
+def video_id(value):
+    print "val=", value
+    m = ups.urlparse(value)
+    try:
+        match = ups.parse_qs(m.query)['v']
+        print match
+        return match[0]
+    except:
+        print "no id found"
+        return None
+
+
 def home(request):
     if request.user.is_authenticated():
         template = loader.get_template('home.html')
@@ -83,6 +113,16 @@ def home(request):
             currentProfile = profile.objects.get(user=currentUser)
             profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
             postComments = postComment.objects.filter(post=j)
+            # postCommentsArr = []
+            postCommentsDict = {}
+            # for x in postComments:
+            #     print x
+            #     if "<iframe" in x.content:
+            #         print "FOUnd"
+            #         postCommentsDict['youtube'] = video_id(x.content)
+            videoURL = None
+            if "youtube.com" in j.content:
+                videoURL = video_id(j.content)
             likers = j.getLikers()
             likersArray = []
             for x in likers:
@@ -92,7 +132,7 @@ def home(request):
                 isLiked = True
             except:
                 isLiked = False
-            sendThesePosts.append([j.postSender.username, j.content, j.created_at.strftime("%I:%M %B %d, %Y"), j.postReceiver.username, profilePrimary.profilePic.picLocation.url, postComments, j.pk, isLiked, j.likes, likersArray])
+            sendThesePosts.append([j.postSender.username, j.content, j.created_at.strftime("%I:%M %B %d, %Y"), j.postReceiver.username, profilePrimary.profilePic.picLocation.url, postComments, j.pk, isLiked, j.likes, likersArray, videoURL])
         context = {'wallPosts': sendThesePosts}
         return HttpResponse(template.render(context, request))
     else:
@@ -108,12 +148,16 @@ def editProfile(request):
         }
         useThis = str("Hello")
         currentProfile = profile.objects.get(user=request.user)
+        try:
+            userPhoneNumber = currentProfile.phoneNumber
+        except:
+            userPhoneNumber = None
         profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
         profileSecondary = profilePhotos.objects.filter(profile=currentProfile)
         sendThesePics = []
         for j in profileSecondary:
             sendThesePics.append([j.picLocation.url, j.desc, j.pk])
-        return HttpResponse(template.render({"primaryPic": profilePrimary.profilePic.picLocation.url, "secondaryPics": sendThesePics, "aboutMe": currentProfile.aboutMe, "title":request.user.username + "(" + request.user.first_name + ")"}, request))
+        return HttpResponse(template.render({"primaryPic": profilePrimary.profilePic.picLocation.url, "secondaryPics": sendThesePics, "aboutMe": currentProfile.aboutMe, "title":request.user.username + "(" + request.user.first_name + ")", "phoneNumber": userPhoneNumber}, request))
     else:
         #login
         return HttpResponseRedirect("/")
@@ -251,7 +295,10 @@ def userProfile(request, string):
             currentUser = User.objects.get(username=string)
             currentProfile = profile.objects.get(user=currentUser)
             profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
-
+            try:
+                userPhoneNumber = currentProfile.phoneNumber
+            except:
+                userPhoneNumber = None
             userWallPosts = wallPost.objects.filter(postReceiver=currentUser).order_by('-pk')
             sendThesePosts = []
             for j in userWallPosts:
@@ -259,6 +306,8 @@ def userProfile(request, string):
                 sendingProfile = profile.objects.get(user=sendingUser)
                 #profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
                 #profilePrimary = profilePrimaryPic.objects.get(profile=j.postSender.profile.profileprimarypic_set.first())
+                if "youtube.com" in j.content:
+                    videoURL = video_id(j.content)
                 postComments = postComment.objects.filter(post=j)
                 likers = j.getLikers()
                 likersArray = []
@@ -269,11 +318,11 @@ def userProfile(request, string):
                     isLiked = True
                 except:
                     isLiked = False
-                sendThesePosts.append([j.postSender, j.content, j.created_at.strftime("%I:%M %B %d, %Y"),sendingProfile.getPrimaryPicURL(), postComments, j.pk, isLiked, j.likes, likersArray ])
+                sendThesePosts.append([j.postSender, j.content, j.created_at.strftime("%I:%M %B %d, %Y"),sendingProfile.getPrimaryPicURL(), postComments, j.pk, isLiked, j.likes, likersArray, videoURL ])
 
             return HttpResponse(template.render(
                 {"primaryPic": profilePrimary.profilePic.picLocation.url, 'wallPosts': sendThesePosts,
-                "aboutMe": currentProfile.aboutMe, "title": currentUser.username + "(" + currentUser.first_name + ")"},
+                "aboutMe": currentProfile.aboutMe, "title": currentUser.username + "(" + currentUser.first_name + ")", "phoneNumber": userPhoneNumber},
                 request))
         except:
             return HttpResponse("Error, Profile not initialized properly")
@@ -395,3 +444,20 @@ def likePost(request):
                 currentPost.incLikes()
                 return HttpResponse("Incremented Like")
 
+def addChangePhoneNumber(request):
+    if request.is_ajax():
+        if request.method == "POST":
+            data = request.POST.getlist("data[]")
+            user = data[0]
+            phoneNumberActual = data[1]
+            pattern = re.compile(r'^\+?1?\d{9,15}$')
+            didMatch = pattern.match(phoneNumberActual)
+            if pattern.match(phoneNumberActual):
+                print "matched"
+                currentProfile = profile.objects.get(user=request.user)
+                currentProfile.phoneNumber = phoneNumberActual
+                currentProfile.save()
+                return HttpResponse("Done")
+            else:
+                print "did not match"
+                return HttpResponse("Invalid Format")
