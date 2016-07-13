@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/models.py" afterPath="$PROJECT_DIR$/socialMedia/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/editProfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" afterPath="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/urls.py" afterPath="$PROJECT_DIR$/socialMedia/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMedia/views.py" afterPath="$PROJECT_DIR$/socialMedia/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/editProfile.html" afterPath="$PROJECT_DIR$/templates/editProfile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/userProfile.html" afterPath="$PROJECT_DIR$/templates/userProfile.html" />
     </list>
     <ignored path="socialMediaApp.iws" />
@@ -32,14 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userProfile.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userProfile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="49" column="116" selection-start-line="49" selection-start-column="116" selection-end-line="49" selection-end-column="116" />
+            <state relative-caret-position="195">
+              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -174,8 +165,8 @@
         <option value="$PROJECT_DIR$/templates/editProfile.html" />
         <option value="$PROJECT_DIR$/socialMedia/urls.py" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/userProfile.js" />
-        <option value="$PROJECT_DIR$/templates/userProfile.html" />
         <option value="$PROJECT_DIR$/socialMedia/views.py" />
+        <option value="$PROJECT_DIR$/templates/userProfile.html" />
       </list>
     </option>
   </component>
@@ -752,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468369738042</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added twilio sms and video embed">
+      <created>1468435684521</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1468435684521</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -796,7 +794,8 @@
     <MESSAGE value="Post from home" />
     <MESSAGE value="using django template to log in" />
     <MESSAGE value="using django template for user registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="using django template for user registration" />
+    <MESSAGE value="Added twilio sms and video embed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added twilio sms and video embed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -888,9 +887,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,9 +1013,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,21 +1230,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
+    <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="49" column="116" selection-start-line="49" selection-start-column="116" selection-end-line="49" selection-end-column="116" />
+        <state relative-caret-position="90">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/userProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
