@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="066c32fd-3478-4cbc-8b74-67e209600e08" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialMediaApp/settings.py" afterPath="$PROJECT_DIR$/socialMediaApp/settings.py" />
     </list>
     <ignored path="socialMediaApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/socialMediaApp/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -55,16 +65,6 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/socialMedia/local/lib/python2.7/site-packages/django/core/handlers/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1935">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,7 +147,6 @@
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/jquery.easyPaginate.js" />
         <option value="$PROJECT_DIR$/socialMedia/admin.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/socialMediaApp/settings.py" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/home.css" />
         <option value="$PROJECT_DIR$/socialMedia/static/socialMedia/header.js" />
         <option value="$PROJECT_DIR$/templates/uploadPic.html" />
@@ -168,6 +167,7 @@
         <option value="$PROJECT_DIR$/templates/userProfile.html" />
         <option value="$PROJECT_DIR$/socialMedia/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/socialMediaApp/settings.py" />
       </list>
     </option>
   </component>
@@ -786,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468438845614</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="updated requirements">
+      <created>1468440033509</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1468440033509</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -832,7 +839,8 @@
     <MESSAGE value="using django template for user registration" />
     <MESSAGE value="Added twilio sms and video embed" />
     <MESSAGE value="fixing twilio pagelaod bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing twilio pagelaod bug" />
+    <MESSAGE value="updated requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated requirements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1083,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socialMediaApp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/socialMedia/static/socialMedia/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -1285,6 +1285,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socialMediaApp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
           <folding />
         </state>
       </provider>
