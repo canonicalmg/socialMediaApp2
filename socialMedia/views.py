@@ -289,28 +289,37 @@ def headerSignOut(request):
 
 def userProfile(request, string):
     if User.objects.filter(username=string).exists():
+        errorCode = ""
         #title, primary pic, about me
         try:
             template = loader.get_template('userProfile.html')
+            errorCode = errorCode + "1"
             currentUser = User.objects.get(username=string)
             currentProfile = profile.objects.get(user=currentUser)
             profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
+            errorCode = errorCode + "2"
             try:
                 userPhoneNumber = currentProfile.phoneNumber
             except:
                 userPhoneNumber = None
+            errorCode = errorCode + "3"
             userWallPosts = wallPost.objects.filter(postReceiver=currentUser).order_by('-pk')
             sendThesePosts = []
+            errorCode = errorCode + "4"
             for j in userWallPosts:
+                errorCode = errorCode + "a"
                 sendingUser = User.objects.get(username=j.postSender.username)
                 sendingProfile = profile.objects.get(user=sendingUser)
                 #profilePrimary = profilePrimaryPic.objects.get(profile=currentProfile)
                 #profilePrimary = profilePrimaryPic.objects.get(profile=j.postSender.profile.profileprimarypic_set.first())
+                errorCode = errorCode + "b"
                 if "youtube.com" in j.content:
                     videoURL = video_id(j.content)
+                    errorCode = errorCode + "c"
                 postComments = postComment.objects.filter(post=j)
                 likers = j.getLikers()
                 likersArray = []
+                errorCode = errorCode + "d"
                 for x in likers:
                     likersArray.append(x.user.username)
                 try:
@@ -318,15 +327,16 @@ def userProfile(request, string):
                     isLiked = True
                 except:
                     isLiked = False
+                errorCode = errorCode + "e"
                 sendThesePosts.append([j.postSender, j.content, j.created_at.strftime("%I:%M %B %d, %Y"),sendingProfile.getPrimaryPicURL(), postComments, j.pk, isLiked, j.likes, likersArray, videoURL ])
-
+            errorCode = errorCode + "5"
             return HttpResponse(template.render(
                 {"primaryPic": profilePrimary.profilePic.picLocation.url, 'wallPosts': sendThesePosts,
                 "aboutMe": currentProfile.aboutMe, "title": currentUser.username + "(" + currentUser.first_name + ")", "phoneNumber": userPhoneNumber},
                 request))
         except Exception as e:
-            return '%s (%s)' % (e.message, type(e))
-            #return HttpResponse("Error, Profile not initialized properly")
+            #return '%s (%s)' % (e.message, type(e))
+            return HttpResponse("Error, Profile not initialized properly. error:", errorCode)
     else:
         return HttpResponse("User does not exist")
 
