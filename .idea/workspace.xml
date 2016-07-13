@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
-              <caret line="473" column="55" selection-start-line="473" selection-start-column="55" selection-end-line="473" selection-end-column="55" />
+              <caret line="473" column="41" selection-start-line="473" selection-start-column="41" selection-end-line="473" selection-end-column="41" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -822,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468448483837</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="trying twilio receive text">
+      <created>1468448659319</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1468448659319</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1313,7 +1320,7 @@
     <entry file="file://$PROJECT_DIR$/socialMedia/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
-          <caret line="473" column="55" selection-start-line="473" selection-start-column="55" selection-end-line="473" selection-end-column="55" />
+          <caret line="473" column="41" selection-start-line="473" selection-start-column="41" selection-end-line="473" selection-end-column="41" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
