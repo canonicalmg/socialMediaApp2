@@ -324,8 +324,9 @@ def userProfile(request, string):
                 {"primaryPic": profilePrimary.profilePic.picLocation.url, 'wallPosts': sendThesePosts,
                 "aboutMe": currentProfile.aboutMe, "title": currentUser.username + "(" + currentUser.first_name + ")", "phoneNumber": userPhoneNumber},
                 request))
-        except:
-            return HttpResponse("Error, Profile not initialized properly")
+        except Exception as e:
+            return '%s (%s)' % (e.message, type(e))
+            #return HttpResponse("Error, Profile not initialized properly")
     else:
         return HttpResponse("User does not exist")
 
