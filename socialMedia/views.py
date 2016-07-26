@@ -486,5 +486,6 @@ def incomingSMS(request):
 @csrf_exempt
 def incomingPOSTAndroid(request):
     if request.method == "POST":
-        print "entered"
+        print "entered incomingPOSTAndroid"
         print "post data = ", request.POST
+        return HttpResponse("done")
