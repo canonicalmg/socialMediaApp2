@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^$', views.signUpLogIn, name='signUp'),
     url(r'^home$', views.home, name='home'),
     url(r'^incomingSMS$', views.incomingSMS, name='incomingSMS'),
+    url(r'^incomingPOSTAndroid$', views.incomingPOSTAndroid, name='incomingPOSTAndroid'),
     url(r'^commentToPost$', views.commentToPost, name='commentToPost'),
     url(r'^likePost$', views.likePost, name='likePost'),
     url(r'^searchUsers$', views.searchUsers, name='searchUsers'),

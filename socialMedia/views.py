@@ -467,11 +467,8 @@ def addChangePhoneNumber(request):
 @csrf_exempt
 def incomingSMS(request):
     if request.method == "POST":
-        print "all =", request
-        print "PRINTING ", request.body
         currentUser = User.objects.get(username="marcusg")
-        currentProfile = profile.objects.get(user=currentUser)
-        content = request.POST.get('Body', '') #action=wallpost, body="this is the body text"
+        content = request.POST.get('Body', '') #{"action" : "wallpost", "body" : "body text"}
         content = json.loads(content)
         action = content['action']
         body = content['body']
@@ -484,6 +481,10 @@ def incomingSMS(request):
             currentUser = User.objects.get(username="SMSBot")
             newPost = wallPost(postSender=currentUser, postReceiver=sendTo, content=body)
             newPost.save()
-        #currentProfile.aboutMe = action + "%%" + body
-        currentProfile.save()
         return HttpResponse("done")
+
+@csrf_exempt
+def incomingPOSTAndroid(request):
+    if request.method == "POST":
+        print "entered"
+        print "post data = ", request.POST
